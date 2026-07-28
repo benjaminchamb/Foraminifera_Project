@@ -69,6 +69,7 @@ This outperformed both supervised CNN baselines, showing the value of the unlabe
 
 ## Repository Structure
 
+```text
 .
 ├── src/
 │   ├── __init__.py
@@ -76,17 +77,18 @@ This outperformed both supervised CNN baselines, showing the value of the unlabe
 │   ├── train.py                 # Training loop (PyTorch Lightning + Weights & Biases logging)
 │   ├── evaluate.py              # Loads a checkpoint and evaluates the MAE model
 │   ├── feature_extraction.py    # Extracts MAE encoder features from all volumes
-│   ├── feature_investigator.py  
+│   ├── feature_investigator.py
 │   ├── utils.py                 # Utility functions: paths, volume visualization (3D, slices, histograms), checkpoint loading
-│   ├── eda                
+│   ├── eda.py
 │   └── models/
 │       ├── __init__.py
 │       ├── MAE.py               # MAE_3D_Lightning: masked autoencoder and feature extraction
 │       └── resnet_3d.py         # ResNet3D: PyTorch Lightning wrapper around torchvision's r3d_18
 ├── Report/
-│   └── Poster_foraminifera.pdf      # Project poster summarizing the methods and results
+│   └── Poster_foraminifera.pdf  # Project poster summarizing the methods and results
 ├── .gitignore
 └── kaggle.md                    # Challenge and dataset description
+```
 
 ## Requirements
 pip install torch torchvision pytorch-lightning torchmetrics tifffile pandas numpy matplotlib plotly tqdm wandb scikit-learn
